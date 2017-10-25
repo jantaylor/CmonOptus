@@ -2,6 +2,12 @@
 
 CmonOptus is a python3 script which runs speed tests every now and again, to see whether the speeds that you're currently getting; are similar to that of what you pay for.
 
+## Credit
+
+These users helped me improve this script.
+- [gregsifr](https://github.com/gregsifr)
+- [sp0](https://github.com/sp0)
+
 ## Dependencies
 - [pyspeedtest](https://github.com/fopina/pyspeedtest)
 - [tweepy](https://github.com/tweepy/tweepy)
