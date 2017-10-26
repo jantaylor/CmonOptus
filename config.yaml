@@ -1,7 +1,7 @@
 consumer_key: CONSUMER_KEY
 consumer_secret: CONSUMER_SECRET
-access_key: ACCESS_KEY
-access_secret: ACCESS_SECRET
+access_token: ACCESS_TOKEN
+access_token_secret: ACCESS_TOKEN_SECRET
 check_interval: TIME_IN_SECONDS
 timeout_interval: 3600
 paid_upload_speed: EXPECTED_UPLOAD

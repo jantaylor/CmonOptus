@@ -85,10 +85,10 @@ Simply press the download button on this page, then proceed to press 'Download a
 
 ## Part C - Setting up the config.yaml file
 1. In that /CmonOptus/ folder there is a file named 'config.yaml', open up this file in your favorite text editor and alter the values as needed.
-2. Use the values that we got from the last part to fill the first four rows.
-3. The ```check_interval``` value should be how often you want the software to run the speed test in seconds (the software randomly generates a time between check_interval*0.75 and check_interval*1.25, to look more legitimate).
-4. The ```timeout_interval``` value will set a hard limit on how often CmonOptus can tweet. For example, it has a default of no more than once every hour (3600 seconds).
-5. The ```paid_upload_speed``` and ```paid_download_speed``` should be the internet speed promised in your contract, in Mb/s.
+2. ```consumer_key```, ```consumer_secret```, ```access_token```, and ```access_token_secret``` are on the Twitter App Keys and Tokens page
+3. ```check_interval``` value should be how often you want the software to run the speed test in seconds (the software randomly generates a time between check_interval*0.75 and check_interval*1.25, to look more legitimate).
+4. ```timeout_interval``` value will set a hard limit on how often CmonOptus can tweet. For example, it has a default of no more than once every hour (3600 seconds).
+5. ```paid_upload_speed``` and ```paid_download_speed``` should be the internet speed promised in your contract, in Mb/s.
 
 ## Part D - Running the app.
 #### Option A - Simple

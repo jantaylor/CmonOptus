@@ -18,7 +18,7 @@ def readConfig(filepath='config.yaml'):
 
 def tweepyAuthentication(details):
     auth = tweepy.OAuthHandler(details['consumer_key'], details['consumer_secret'])
-    auth.set_access_token(details['access_key'], details['access_secret'])
+    auth.set_access_token(details['access_token'], details['access_token_secret'])
     return auth
 
 def collectConnectionStatistics():
