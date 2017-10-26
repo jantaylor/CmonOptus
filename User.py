@@ -33,8 +33,9 @@ def collectConnectionStatistics():
 def sendTweet(upload, download, details, auth):
     api = tweepy.API(auth)
 
-    print('Sending negative tweet...')
-    api.update_status(status='.@Optus @NBN_Australia, Why am I getting ' + str(round(download, 1)) + 'down/' + str(round(upload, 1)) + 'up, when I pay for 100down/40up in Wollongong, NSW? #NBN #Australia #Optus')
+    tweet = '.@%d, Why am I getting %.1fdown/%.1fup, when I pay for %ddown/%dup in %d? #%d'
+    print(tweet % details['service_provider'], download, upload, details['paid_download_speed'], details['paid_upload_speed'], details['location'], details['service_provider'])
+    #api.update_status(tweet % details['service_provider'], download, upload, details['paid_download_speed'], details['paid_upload_speed'], details['location'], details['service_provider'])
 
 def sleep(sleeptime):
     m, s = divmod(sleeptime, 60)
@@ -65,10 +66,10 @@ if __name__ == "__main__":
     while True:
         upload, download = collectConnectionStatistics()
         if not isTimedOut(details['timeout_interval'], previous_tweet_time):
-            if download < details['paid_download_speed']*0.75:
+            if download < int(details['paid_download_speed']*0.5):
                 previous_tweet_time = datetime.now()
                 sendTweet(upload, download, details, auth)
             else:
                 print('Surprisingly speed was good!')
         
-        time.sleep(randint(details['check_interval']*0.75, details['check_interval']*1.25))
+        time.sleep(randint(int(details['check_interval']*0.75), int(details['check_interval']*1.25)))
