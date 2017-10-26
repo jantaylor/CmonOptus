@@ -7,7 +7,7 @@ CmonOptus is a python3 script which runs speed tests every now and again, to see
 These users helped me improve this script.
 - [gregsifr](https://github.com/gregsifr)
 - [sp0](https://github.com/sp0)
-- [NickelOz][https://github.com/NickelOz]
+- [NickelOz](https://github.com/NickelOz)
 
 ## Dependencies
 - [pyspeedtest](https://github.com/fopina/pyspeedtest)
