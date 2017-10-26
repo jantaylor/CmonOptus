@@ -2,17 +2,18 @@
 #   sp0
 #   gregsifr
 
+import sys
+import time
+from datetime import date
+from datetime import datetime
+from random import randint
+
 import pyspeedtest
 import tweepy
-import time
-import datetime
 import yaml
-import sys
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-from datetime import date
-from random import randint
 
 def readConfig(filepath='config.yaml'):
     with open(filepath, 'r') as f:
@@ -41,6 +42,15 @@ def sleep(sleeptime):
     print("Checking speeds again in: %d hours %02d minutes and %02d seconds.\n"%(h,m,s))
     time.sleep(sleeptime)
 
+def isTimedOut(timeout, previous_tweet_time):
+    if previous_tweet_time is not None:
+        time_diff = datetime.now() - previous_tweet_time
+        if time_diff.days > 0 or time_diff.seconds > timeout:
+            return True
+
+    return False
+
+
 if __name__ == "__main__":
     # Allow command line args
     if len(sys.argv) > 1:
@@ -50,11 +60,15 @@ if __name__ == "__main__":
 
     auth = tweepyAuthentication(details)
 
+    previous_tweet_time = None
+
     while True:
-        upload, download = collectConnectionStatistics()
-        if download < details['paid_download_speed']*0.75:
-            sendTweet(upload, download, details, auth)
-        else:
-            print('Surprisingly speed was good!')
+        if not isTimedOut(details['timeout_interval'], previous_tweet_time):
+            upload, download = collectConnectionStatistics()
+            if download < details['paid_download_speed']*0.75:
+                previous_tweet_time = datetime.now()
+                sendTweet(upload, download, details, auth)
+            else:
+                print('Surprisingly speed was good!')
         
         time.sleep(randint(details['check_interval']*0.75, details['check_interval']*1.25))
