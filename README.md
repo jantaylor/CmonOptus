@@ -16,6 +16,18 @@ These users helped me improve this script.
 # Installation
 ## Part A - Downloading the files
 
+### Installing Dependencies
+
+All three dependencies can be installed you Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/).
+
+Once you have pip installed, you can install three dependencies with
+
+```
+pip install pyspeedtest tweepy pyyaml
+```
+
+### Installing CmonOptus
+
 #### Option 1 - Downloading here
 Simply press the download button on this page, then proceed to press 'Download as ZIP'.
 
@@ -43,6 +55,8 @@ Simply press the download button on this page, then proceed to press 'Download a
 1. In that /CmonOptus/ folder there is a file named 'config.yaml', open up this file in your favorite text editor and alter the values as needed.
 2. Use the values that we got from the last part to fill the first four rows.
 3. The ```check_interval``` value should be how often you want the software to run the speed test in seconds (the software randomly generates a time between check_interval*0.75 and check_interval*1.25, to look more legitimate).
+4. The ```timeout_interval``` value will set a hard limit on how often CmonOptus can tweet. For example, it has a default of no more than once every hour (3600 seconds).
+5. The ```paid_upload_speed``` and ```paid_download_speed``` should be the internet speed promised in your contract, in Mb/s.
 
 ## Part D - Running the app.
 #### Option A - Simple
