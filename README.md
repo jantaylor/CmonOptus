@@ -65,7 +65,7 @@ Simply press the download button on this page, then proceed to press 'Download a
 
 #### Option 2 - Downloading through Git
 1. Firstly, you will need to download Git.
-2. To do this you need to navigate to the following page: [git.](https://git-scm.com/).
+2. To do this you need to navigate to the following page: [git](https://git-scm.com/).
 3. You should then hit the download button which can be found on that page.
 4. After downloading, install the software as you would any other (just hit next...)
 5. Navigate to your desired directory in Terminal/Command Prompt and execute the following command;
@@ -73,14 +73,14 @@ Simply press the download button on this page, then proceed to press 'Download a
 6. If you check the folder that you designated to put it in; you should see a folder called 'CmonOptus'.
 
 ## Part B - Creating a Twitter App
-1. Head to the (Twitter App Site)[https://app.twitter.com/].
+1. Head to the (Twitter App Site)[https://apps.twitter.com/].
 2. Hit 'Create New App'.
 3. Fill in the form displayed (only name, description, and website are needed), and agree to the developer agreement.
 4. Hit 'Create App'.
-5. You are now on your app management page, here you can important app details.
+5. You are now on your app management page, here you can find your app's details.
 6. Hit the 'Keys and Access Tokens' tab near the top of the page.
-7. It will display your consumer key, and consumer secret.
-8. To get your access key, and access secret, scroll down and hit 'Create my access token'. The page will refresh and display your access codes.
+7. It will display your consumer key and consumer secret.
+8. To get your access key and access secret, scroll down and hit 'Create my access token'. The page will refresh and display your access codes.
 9. Keep these close-by because they are important for the next part (consumer key, consumer secret, access key, access secret).
 
 ## Part C - Setting up the config.yaml file
@@ -89,7 +89,6 @@ Simply press the download button on this page, then proceed to press 'Download a
 3. The ```check_interval``` value should be how often you want the software to run the speed test in seconds (the software randomly generates a time between check_interval*0.75 and check_interval*1.25, to look more legitimate).
 4. The ```timeout_interval``` value will set a hard limit on how often CmonOptus can tweet. For example, it has a default of no more than once every hour (3600 seconds).
 5. The ```paid_upload_speed``` and ```paid_download_speed``` should be the internet speed promised in your contract, in Mb/s.
-6. The 
 
 ## Part D - Running the app.
 #### Option A - Simple
