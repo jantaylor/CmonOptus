@@ -18,7 +18,8 @@ These users helped me improve this script.
 
 ### Installing Dependencies
 
-All three dependencies can be installed you Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/)
+All three dependencies can be installed you Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/).
+
 Once you have pip installed, you can install three dependencies with
 
 ```
