@@ -29,9 +29,9 @@ def collectConnectionStatistics():
 def sendTweet(upload, download, details, auth):
     api = tweepy.API(auth)
 
-    tweet = '.@%d, Why am I getting %.1fdown/%.1fup, when I pay for %ddown/%dup in %d? #%d'
-    print(tweet % details['service_provider'], download, upload, details['paid_download_speed'], details['paid_upload_speed'], details['location'], details['service_provider'])
-    #api.update_status(tweet % details['service_provider'], download, upload, details['paid_download_speed'], details['paid_upload_speed'], details['location'], details['service_provider'])
+    tweet = '%s, Why am I getting %.1fdown/%.1fup, when I pay for %ddown/%dup in %s? #%s'
+    print(datetime.now().strftime("%x %X") + ": " + tweet % (details['service_provider'], download, upload, details['paid_download_speed'], details['paid_upload_speed'], details['location'], details['service_provider']))
+    api.update_status(tweet % (details['service_provider'], download, upload, details['paid_download_speed'], details['paid_upload_speed'], details['location'], details['service_provider']))
 
 def sleep(sleeptime):
     m, s = divmod(sleeptime, 60)

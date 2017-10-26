@@ -19,13 +19,13 @@ These users helped me improve this script.
 
 ### Installing Dependencies
 
-All three dependencies can be installed with Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/).
+All four dependencies can be installed with Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/).
 
 #### Option 1 - Installing dependances globally
-Once you have pip installed, you can install three dependencies with:
+Once you have pip installed, you can install the four dependencies with:
 
 ```
-pip install pyspeedtest tweepy pyyaml
+pip install pyspeedtest tweepy pyyaml plotly
 ```
 
 #### Option 2 - Installing VirtualENV for contained environment
@@ -89,6 +89,8 @@ Simply press the download button on this page, then proceed to press 'Download a
 3. ```check_interval``` value should be how often you want the software to run the speed test in seconds (the software randomly generates a time between check_interval*0.75 and check_interval*1.25, to look more legitimate).
 4. ```timeout_interval``` value will set a hard limit on how often CmonOptus can tweet. For example, it has a default of no more than once every hour (3600 seconds).
 5. ```paid_upload_speed``` and ```paid_download_speed``` should be the internet speed promised in your contract, in Mb/s.
+6. ```service_provider``` is the twitter handle of your ISP, keep the twitter handle wrapped in quotes.
+7. ```location``` is the state or province you are testing/located in.
 
 ## Part D - Running the app.
 #### Option A - Simple

@@ -6,3 +6,5 @@ check_interval: TIME_IN_SECONDS
 timeout_interval: 3600
 paid_upload_speed: EXPECTED_UPLOAD
 paid_download_speed: EXPECTED_DOWNLOAD
+service_provider: `@TWITTER_HANDLE`
+location: STATE_PROVIDENCE
