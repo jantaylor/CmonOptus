@@ -24,7 +24,7 @@ def tweepyAuthentication(details):
 def collectConnectionStatistics():
     st = pyspeedtest.SpeedTest()
     st.chooseserver()
-    return st.upload()/1000/1000, st.download()/1000/100
+    return st.upload()/1000/1000, st.download()/1000/1000
 
 def sendTweet(upload, download, details, auth):
     api = tweepy.API(auth)
