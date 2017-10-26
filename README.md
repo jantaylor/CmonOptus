@@ -19,13 +19,44 @@ These users helped me improve this script.
 
 ### Installing Dependencies
 
-All three dependencies can be installed you Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/).
+All three dependencies can be installed with Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/).
 
-Once you have pip installed, you can install three dependencies with
+#### Option 1 - Installing dependances globally
+Once you have pip installed, you can install three dependencies with:
 
 ```
 pip install pyspeedtest tweepy pyyaml
 ```
+
+#### Option 2 - Installing VirtualENV for contained environment
+Instead of installing the dependancies globally and potentially breaking other apps, you can install the dependancies in a contained environment.
+First install virtualenv with:
+
+```
+pip install virtualenv
+```
+
+then set up the virtual environment inside the *root* repo folder:
+
+```
+virtualenv venv
+```
+
+*venv* is the name of the folder where all the dependancies will be stored.
+Now activate *venv* using the method for your operating system.
+
+Linux/Mac: ```source venv/bin/activate```
+
+Windows: ```./venv/Scripts/activate```
+
+A requirements file has been created to make installation easier, just type the following to finish installing the dependancies.
+
+```
+pip install -r requirements.txt
+```
+
+You will need to have virtualenv activated whenever you are working, running, or developing on the project. Follow the above instructions again to activate.
+When finished, you can deactivate by typing ```deactivate```.
 
 ### Installing CmonOptus
 
