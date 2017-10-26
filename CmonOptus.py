@@ -1,7 +1,3 @@
-# Big thanks to the following contributors!
-#   sp0
-#   gregsifr
-
 import sys
 import time
 from datetime import date
@@ -66,10 +62,10 @@ if __name__ == "__main__":
     while True:
         upload, download = collectConnectionStatistics()
         if not isTimedOut(details['timeout_interval'], previous_tweet_time):
-            if download < int(details['paid_download_speed']*0.5):
+            if download < int(details['paid_download_speed'])*0.5:
                 previous_tweet_time = datetime.now()
                 sendTweet(upload, download, details, auth)
             else:
                 print('Surprisingly speed was good!')
         
-        time.sleep(randint(int(details['check_interval']*0.75), int(details['check_interval']*1.25)))
+        time.sleep(randint(int(details['check_interval'])*0.75, int(details['check_interval'])*1.25))

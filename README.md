@@ -7,6 +7,7 @@ CmonOptus is a python3 script which runs speed tests every now and again, to see
 These users helped me improve this script.
 - [gregsifr](https://github.com/gregsifr)
 - [sp0](https://github.com/sp0)
+- [NickelOz][https://github.com/NickelOz]
 
 ## Dependencies
 - [pyspeedtest](https://github.com/fopina/pyspeedtest)
@@ -57,17 +58,18 @@ Simply press the download button on this page, then proceed to press 'Download a
 3. The ```check_interval``` value should be how often you want the software to run the speed test in seconds (the software randomly generates a time between check_interval*0.75 and check_interval*1.25, to look more legitimate).
 4. The ```timeout_interval``` value will set a hard limit on how often CmonOptus can tweet. For example, it has a default of no more than once every hour (3600 seconds).
 5. The ```paid_upload_speed``` and ```paid_download_speed``` should be the internet speed promised in your contract, in Mb/s.
+6. The 
 
 ## Part D - Running the app.
 #### Option A - Simple
 1. Simply run the command (this may be different if you choose to rename the file);
-```python3 User.py```
+```python3 CmonOptus.py```
 2. Monitor the software to make sure it's working properly.
 3. Voila.
 
 #### Option B - Advanced
 1. You can make as many '.yaml' files as you like with different app details, if you have multiple apps.
 2. Run the command;
-```python3 User.py (filename).yaml```
+```python3 CmonOptus.py (filename).yaml```
 2. Monitor the software to make sure it's working properly.
 3. Voila.
