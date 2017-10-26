@@ -16,6 +16,17 @@ These users helped me improve this script.
 # Installation
 ## Part A - Downloading the files
 
+### Installing Dependencies
+
+All three dependencies can be installed you Python's package manager, [pip](https://pip.pypa.io/en/stable/installing/)
+Once you have pip installed, you can install three dependencies with
+
+```
+pip install pyspeedtest tweepy pyyaml
+```
+
+### Installing CmonOptus
+
 #### Option 1 - Downloading here
 Simply press the download button on this page, then proceed to press 'Download as ZIP'.
 
