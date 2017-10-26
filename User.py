@@ -63,8 +63,8 @@ if __name__ == "__main__":
     previous_tweet_time = None
 
     while True:
+        upload, download = collectConnectionStatistics()
         if not isTimedOut(details['timeout_interval'], previous_tweet_time):
-            upload, download = collectConnectionStatistics()
             if download < details['paid_download_speed']*0.75:
                 previous_tweet_time = datetime.now()
                 sendTweet(upload, download, details, auth)
